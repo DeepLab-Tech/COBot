@@ -87,8 +87,7 @@ async def on_message(message):
 
             data_zip = '\n'.join([c + o for c, o in zip(dataList, dataset)])
 
-            confirm_message_text = f""" {data_zip}
-            {message.author.mention} Bilgilerini onaylıyorsan 10 saniye içerisinde 👍 tepkisini verebilirsin"""
+            confirm_message_text = f"""{message.author.mention} Bilgilerini onaylıyorsan 10 saniye içerisinde 👍 tepkisini verebilirsin"""
 
             CO_bot_message = await channel.send(confirm_message_text, delete_after=10)
             await CO_bot_message.add_reaction("\N{THUMBS UP SIGN}")
